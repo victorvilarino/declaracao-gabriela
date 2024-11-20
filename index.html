@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Secular+One&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./src/imagens/Heart-icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/estilos.css" />
+    <link rel="stylesheet" href="./src/css/responsivo.css" />
+
+    <title>EU TE AMO MUITO</title>
+</head>
+
+<body>
+<script>
+
+// Aguarda o carregamento completo do DOM
+document.addEventListener("DOMContentLoaded", function() {
+    const dataAlvo = new Date(2023, 10, 22, 0, 0, 0);
+    function atualizarContador() {
+        const agora = new Date(); // Hora atual
+        let diferenca = agora - dataAlvo; // Diferença em milissegundos
+        // Calcula o total de anos completos
+        const anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365.25));
+        diferenca %= (1000 * 60 * 60 * 24 * 365.25);
+        // Calcula o total de meses completos (aproximado como 30.44 dias por mês)
+        const meses = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 30.44));
+        diferenca %= (1000 * 60 * 60 * 24 * 30.44);
+        // Calcula os dias restantes
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        diferenca %= (1000 * 60 * 60 * 24);
+        // Calcula horas, minutos e segundos restantes
+        const horas = Math.floor(diferenca / (1000 * 60 * 60));
+        diferenca %= (1000 * 60 * 60);
+        const minutos = Math.floor(diferenca / (1000 * 60));
+        const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+        // Construindo o texto a ser exibido com anos e meses, se aplicáveis
+        let texto = "";
+        if (anos > 0) texto += `${anos} ano${anos > 1 ? 's' : ''}, `;
+        if (meses > 0) texto += `${meses} mes${meses > 1 ? 'es' : ''}, `;
+        texto += `${dias}d, ${horas}h, ${minutos}m, e ${segundos}s Desde que eu decidi ter ela ao meu lado ❤`;
+        // Atualiza o elemento com id "contador" para mostrar o tempo decorrido
+        const contadorElement = document.getElementById("contador");
+        if (contadorElement) {
+            contadorElement.textContent = texto;
+        } else {
+            console.error("Elemento com id 'contador' não encontrado.");
+        }
+        // Continue atualizando a cada segundo
+        setTimeout(atualizarContador, 1000);
+    }
+
+    // Chama a função para iniciar a contagem
+    atualizarContador();
+});
+</script> 
+
+<main class="personagens">
+    <div class="personagem selecionado">
+        <img class="imagem" src="./src/imagens/Gabi-nas-costas.jpg" alt="Gabi nas minhas costas" />
+        <div class="conteudo">
+            <i class="logo"></i>
+
+			    <!-- Player de música -->
+				<audio id="musica" loop>
+					<source src="./src/music/Idea 22 (Slowed + Reverb) [ ezmp3.cc ].mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.				
+				</audio>
+
+				<!-- Botão para reproduzir a música -->
+				<button class= music id="playButton"> 🌹  Aperta aqui  🌹 </button>
+				<script>
+					document.addEventListener("DOMContentLoaded", () => {
+						const musica = document.getElementById("musica");
+						const playButton = document.getElementById("playButton");
+			
+						// Evento para iniciar a música ao clicar no botão
+						playButton.addEventListener("click", () => {
+							musica.play(); // Reproduz o áudio
+							playButton.style.display = "none"; // Esconde o botão após o clique
+						});
+					});
+				</script>
+
+            <h2 class="nome-personagem">Eu gosto da "beleza" dela?</h2>
+            <p class="descricao">De verdade, eu me apaixonei-me em literalmente tudo nela, e eu posso especificar mais... Ela é linda, e eu não falo da beleza que todos conseguem ver, eu falo da beleza que ela me mostrou. Muitos não vêem que ela é uma garota incrível, com o coração mais verdadeiro, doce e incrível que eu conheci na vida, eu amo isso nela.</p>
+        </div>
+    </div>
+
+			<div class="personagem">
+				<img class="imagem" src="./src/imagens/quadra-volei.jpeg" alt="Personagem Roronoa Zoro" />
+				<div class="conteudo">
+					<i class="logo"></i>
+					<h2 class="nome-personagem">Sou muito grato</h2>
+					<p class="descricao">Não apenas por ter ela em minha vida, mesmo passando por momentos difíceis, não ter desistido dela pois, no final, eu consegui ficar com ela. Apenas eu sei do que eu sou capaz de fazer por ela, eu simplesmente faria de tudo, e mais um pouco apenas para ver aquele sorriso encostar debaixo dos olhos. Grato por ela não desistir da gente, e grato por ela continuar a me amar dia após dia.</p>
+				</div>
+			</div>
+
+			<div class="personagem">
+				<img class="imagem" src="./src/imagens/Interclasse.jpg" alt="Personagem Monkey D. Luffy" />
+				<div class="conteudo">
+					<i class="logo"></i>
+					<h2 class="nome-personagem">A forma como ela me trata</h2>
+					<p class="descricao">Eu amo o cuidado que ela tem por mim, eu amo quando ela fica envergonhada, das brincadeiras que apenas nós dois entendemos, o olhar dela, a forma que ela olha para mim, eu amo isso. A verdade é que eu sou apaixonado por detalhes, que ninguém mais além de mim pode ver. </p>
+				</div>
+			</div>
+
+			<div class="personagem">
+
+				<img class="imagem" src="./src/imagens/onibus-passeio-escuro.jpg" alt="Personagem Nami" />
+				<div class="conteudo">
+					<i class="logo"></i>
+					<h2 class="nome-personagem">E meus sentimentos?</h2>
+					<p class="descricao">Meus sentimentos por ela jamais se esfriaram, ela é literalmente a pessoa mais importante da minha vida, ela é minha prioridade e eu quero passar o resto da minha vida ao lado dela, para sempre... Eu quero realizar os sonhos dela e nossos planos juntos, eu amarei ela por toda a eternidade.</p>
+				</div>
+			</div>
+
+			<div class="personagem">
+				<img class="imagem" src="./src/imagens/sala-aula.jpg" alt="Personagem Sanji" />
+				
+				<div class="conteudo">
+
+					<i class="logo"></i>
+					<h2 class="nome-personagem"></h2>
+					<p class="descricao">Cada segundo que passa, o meu amor por ela aumenta cada vez mais... O olhar dela, o sorriso... A boca e o cabelo. Tudo nela é tão deslumbrante, eu simplesmente amo a garota que eu posso chamar de minha.</p>
+					<div id="contador"></div> <!-- Aqui o id contador -->
+
+				</div>
+			</div>
+		</main>
+
+		<!-- BOTOES --> 
+		<ul class="botoes">
+
+			<li>
+				<button class="botao selecionado"> 1 </button>
+			</li>
+
+			<li>
+				<button class="botao"> 2 </button>
+			</li>
+			
+			<li>
+				<button class="botao"> 3 </button>
+			</li>
+			
+			<li>
+				<button class="botao"> 4 </button>
+			</li>
+
+			<li>
+				<button class="botao"> 5 </button>
+			</li>
+
+		</ul>
+
+		<script src="./src/js/index.js"></script>
+	</body>
+</html>
