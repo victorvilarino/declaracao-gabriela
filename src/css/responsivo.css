@@ -38,6 +38,7 @@
 }
 
 /* configurar o site no celular */
+
 @media (max-width: 500px) {
     main .personagem .imagem {
         height: auto;
@@ -56,11 +57,42 @@
     }
 
     .botoes {
-        padding: 20px;
+        padding: 10%;
         top: -5%;
     }
 
     .botoes .botao {
-        padding: 17px;
+        padding: 11px;
+    }
+    
+    .conteudo .descricao {
+        color: #ffffff;
+        font-family: "Rubik";
+        line-height: 44px;
+        font-size: 15px;
+    }
+
+    #contador {
+    
+        color: rgb(253, 183, 194);
+        font-size: 25px;
+        font-family: "Secular One";
+        margin-top: 40px;
+    }
+    .botoes .botao {
+        border: none;
+        background-color: rgba(0, 0, 0, 0.0);
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 90px;
+        font-family: 'Brush Script MT', cursive;
+        
+        color: red;
+        text-shadow: 
+        1px 1px 0 rgb(252, 252, 252), /* Contorno para baixo e à direita */
+        -1px 1px 0 rgb(255, 255, 255), /* Contorno para baixo e à esquerda */
+        1px -1px 0 rgb(255, 255, 255), /* Contorno para cima e à direita */
+        -1px -1px 0 rgb(255, 255, 255); /* Contorno para cima e à esquerda */
+        
     }
 }
