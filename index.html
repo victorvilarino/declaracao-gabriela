@@ -20,7 +20,7 @@
 
 // Aguarda o carregamento completo do DOM
 document.addEventListener("DOMContentLoaded", function() {
-    const dataAlvo = new Date(2023, 10, 22, 0, 0, 0);
+    const dataAlvo = new Date(2023, 10, 23, 0, 0);
     function atualizarContador() {
         const agora = new Date(); // Hora atual
         let diferenca = agora - dataAlvo; // Diferença em milissegundos
@@ -53,6 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // Continue atualizando a cada segundo
         setTimeout(atualizarContador, 1000);
     }
+
+    // Chama a função para iniciar a contagem
+    atualizarContador();
+});
+</script> 
 
     // Chama a função para iniciar a contagem
     atualizarContador();
