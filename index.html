@@ -20,7 +20,7 @@
 
 // Aguarda o carregamento completo do DOM
 document.addEventListener("DOMContentLoaded", function() {
-    const dataAlvo = new Date(2023, 10, 23, 0, 0);
+    const dataAlvo = new Date(2023, 10, 23, 0, 0, 0);
     function atualizarContador() {
         const agora = new Date(); // Hora atual
         let diferenca = agora - dataAlvo; // Diferença em milissegundos
@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
         // Construindo o texto a ser exibido com anos e meses, se aplicáveis
         let texto = "";
-        if (anos > 0) texto += `${anos} ano${anos > 1 ? 's' : ''}, `;
-        if (meses > 0) texto += `${meses} mes${meses > 1 ? 'es' : ''}, `;
-        texto += `${dias}d, ${horas}h, ${minutos}m, e ${segundos}s Desde que eu decidi ter ela ao meu lado ❤`;
+        if (anos > 0) texto += ${anos} ano${anos > 1 ? 's' : ''}, ;
+        if (meses > 0) texto += ${meses} mes${meses > 1 ? 'es' : ''}, ;
+        texto += ${dias}d, ${horas}h, ${minutos}m, e ${segundos}s Desde que eu decidi ter ela ao meu lado ❤;
         // Atualiza o elemento com id "contador" para mostrar o tempo decorrido
         const contadorElement = document.getElementById("contador");
         if (contadorElement) {
@@ -53,11 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Continue atualizando a cada segundo
         setTimeout(atualizarContador, 1000);
     }
-
-    // Chama a função para iniciar a contagem
-    atualizarContador();
-});
-</script> 
 
     // Chama a função para iniciar a contagem
     atualizarContador();
